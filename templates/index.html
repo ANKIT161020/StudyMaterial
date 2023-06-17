@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block cssfile %}
+<link rel="stylesheet" href=" {% static '/css/index.css' %} ">
+{% endblock cssfile %}
+
+{% block additem %}<a href="additem/" class="additem">Additem</a>{% endblock additem %}
+{% block body %}
+<div class="container">
+    {% if sem3 != 0 %}
+    <div class="semester 3">
+        <a href="sem3"><img src="{% static '/assets/semester_img.png'%}" alt="" style="width: 14rem; height: 10rem;"> </a> 
+        <a href="sem3"><h1>Sem 3</h1></a> 
+    </div>
+    {% else %}
+    <div class="semester 3">
+        <img src="{% static '/assets/semester_img.png'%}" alt="" style="width: 14rem; height: 10rem;">
+        <p class="no-content">There is no content</p>
+        <h1>Sem 3</h1> 
+    </div>
+    {% endif %}
+
+    {% if sem4 != 0 %}
+    <div class="semester 4">
+        <a href="sem4"><img src="{% static '/assets/semester_img.png'%}" alt="" style="width: 14rem; height: 10rem;"></a> 
+        <a href="sem4"><h1>Sem 4</h1></a> 
+    </div>
+    {% else %}
+    <div class="semester 4">
+        <img src="{% static '/assets/semester_img.png'%}" alt="" style="width: 14rem; height: 10rem;">
+        <p class="no-content">There is no content</p>
+        <h1>Sem 4</h1>
+    </div>
+    {% endif %}
+
+    {% if sem5 != 0 %}
+    <div class="semester 5">
+        <a href="sem5"> <img src="{% static '/assets/semester_img.png'%}" alt="" style="width: 14rem; height: 10rem;"></a>
+        <a href="sem5"><h1>Sem 5</h1></a> 
+    </div>
+    {% else %}
+    <div class="semester 5">
+        <img src="{% static '/assets/semester_img.png'%}" alt="" style="width: 14rem; height: 10rem;">
+        <p class="no-content">There is no content</p>
+        <h1>Sem 5</h1>
+    </div>
+    {% endif %}
+
+    {% if sem6 != 0 %}
+    <div class="semester 6">
+        <a href="sem6"><img src="{% static '/assets/semester_img.png'%}" alt="" style="width: 14rem; height: 10rem;"></a> 
+        <a href="sem6"><h1>Sem 6</h1></a> 
+    </div>
+    {% else %}
+    <div class="semester 6">
+        <img src="{% static '/assets/semester_img.png'%}" alt="" style="width: 14rem; height: 10rem;">
+        <p class="no-content">There is no content</p>
+        <h1>Sem 6</h1> 
+    </div>
+    {% endif %}
+
+    {% if sem7 != 0 %}
+    <div class="semester 7">
+        <a href="sem7"><img src="{% static '/assets/semester_img.png'%}" alt="" style="width: 14rem; height: 10rem;"></a> 
+        <a href="sem7"><h1>Sem 7</h1></a> 
+    </div>
+    {% else %}
+    <div class="semester 7">
+        <img src="{% static '/assets/semester_img.png'%}" alt="" style="width: 14rem; height: 10rem;">
+        <p class="no-content">There is no content</p> 
+        <h1>Sem 7</h1> 
+    </div>
+    {% endif %}
+
+    {% if sem8 != 0 %}
+    <div class="semester 8">
+        <a href="sem8"><img src="{% static '/assets/semester_img.png'%}" alt="" style="width: 14rem; height: 10rem;"></a> 
+        <a href="sem8"><h1>Sem 8</h1></a> 
+    </div>
+    {% else %}
+    <div class="semester 8">
+        <img src="{% static '/assets/semester_img.png'%}" alt="" style="width: 14rem; height: 10rem;">
+        <p class="no-content">There is no content</p> 
+        <h1>Sem 8</h1> 
+    </div>
+    {% endif %}
+
+
+</div>
+{% endblock body%}

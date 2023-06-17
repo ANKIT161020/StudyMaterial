@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: grid;
+    height: 90vh;
+    width: 99.8%;
+    /* border: 2px solid red; */
+    border-radius: 10px;
+    row-gap: 15px;
+    grid-template-columns: 30% 30% 30%;
+    align-items: center;
+}
+
+.no-content{
+    font-size: 1rem;
+    color: red;
+    font-weight: 400;
+}
+
+.semester{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    width: 20rem;
+    height: 15rem;
+    margin-left: 8rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: larger;
+}
+
+.semester:hover{
+    transition: all 1s;
+    box-shadow: 3px 3px 5px black,2px 2px 5px red;
+    font-size: 1.3rem;
+    
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+

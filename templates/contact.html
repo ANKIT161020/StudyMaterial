@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block cssfile %}
+<link rel="stylesheet" href='{% static "/css/contact.css" %}'>
+{% endblock cssfile %}
+
+{% block body%}
+<main>
+    <section class="contact-section">
+        <img class="logo" src='{% static "/assets/LOGO.png" %}' style="width: 10rem; height: 10rem;" alt="LOGO">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>Have a question, comment, or feedback? We'd love to hear from you! Fill out the form below or reach out to us using the contact information provided.</p>
+        <br>
+        <form action="#" method="POST">
+            {% csrf_token %}
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+        
+        <div class="contact-info">
+          <h2>Contact Information</h2>
+          <p><strong>Email:</strong> mystudymaterial2002@gmail.com</p>
+        </div>
+      </div>
+    </section>
+  </main>
+{% endblock body %}

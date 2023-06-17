@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block cssfile %}
+<link rel="stylesheet" href=" {% static '/css/additem.css' %} ">
+{% endblock cssfile %}
+
+{% block body%}
+<body>
+    <form action="" method="post" enctype="multipart/form-data" >
+    {% csrf_token %}
+    <div class="login_popup" id="popup_form">
+        <div class="box">
+            <div class="form">
+                <h1 class="heading">ADD ITEM</h1>
+                {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+
+                <div class="semester">
+                    <label for="sem">Enter the Sem:</label>
+                    <input type="number" name="semnum" id="semnum" class="semnum">
+                </div>
+            
+                <div class="Sub">
+                    <label for="subjects">Enter the Subject:</label><br>
+                    <input type="text" name="subject" id="subject" class="subject">
+                </div>
+
+                <div class="form_group">
+                    <input type="text" placeholder="Enter Expt-name" class="popup_input" name="expt_name">
+                </div>
+                <input class="file_input" type="file" name="expt_file" id="expt_file" >
+                <button class="btn" type="submit">Add-Item</button>
+            </div>
+        </div>
+    </div> 
+</form>
+
+</body>
+{% endblock body%}

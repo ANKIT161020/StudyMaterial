@@ -1,0 +1,137 @@
+body{
+  background-image:linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  font-family: 'Luckiest Guy', cursive;
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+input[type=file]::file-selector-button {
+  margin-right: 20px;
+  border: 2px solid black;
+  background: transparent;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+  /* transition: background .2s ease-in-out; */
+}
+
+input[type=file]::file-selector-button:hover {
+  background: #0d45a5;
+}
+
+.login_popup {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+  }
+  
+  .login_popup .box {
+    background-color: #fff;
+    z-index: 10;
+    padding: 0 10px;
+    width: 400px;
+    height: fit-content;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 1s ease-in-out;
+    border: 2px solid black;
+    box-shadow: 3px 3px black;
+  }
+
+  .login_popup .box .form {
+    padding: 40px 30px;
+  }
+  
+  .login_popup .box .form h1 {
+    color: #000;
+    font-size: 30px;
+    margin: 0 0 30px;
+  }
+  
+  .popup_input {
+    height: 45px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 100%;
+    border: none;
+    /* border: 2px solid black; */
+    border-bottom: 1px solid #ccc;
+    font-size: 1px;
+    color: #000000cc;
+    border-radius: 15px;
+    padding: 5px;
+    background-color: #f2f2f2;
+  
+  }
+  
+  .popup_input:hover {
+    border: 2px solid black;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .popup_input:focus {
+    outline: none;
+  }
+  
+  .btn {
+    width: 100%;
+    margin-top: 15px;
+    height: 45px;
+    border-radius: 25px;
+    font-size: 25px;
+    border: 2px solid black;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: black;
+  }
+
+  .btn:hover{
+    box-shadow: 3px 3px black;
+  }
+
+  .radio{
+    columns: 4;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+    margin-bottom: 10px;
+  }
+  
+
+  input[type=file] {
+    width: 350px;
+    max-width: 100%;
+    color: #444;
+    padding: 5px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #555;
+  }
+
+.heading{
+  align-items: center;
+}
+
+.subject{
+  width: 350px;
+  border-radius: 10px;
+  height: 20px;
+}
+
+.semnum{
+  width: 350px;
+  border-radius: 10px;
+  height: 20px;
+}

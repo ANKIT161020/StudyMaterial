@@ -1,0 +1,51 @@
+{% comment %} {% extends 'base.html' %} {% endcomment %}
+{% load static %}
+
+{% block cssfile %}
+<link rel="stylesheet" href=" {% static '/css/reg_page.css' %} ">
+{% endblock cssfile %}
+
+
+{% block body %}
+<body>
+    <form action="" method="post">
+    {% csrf_token %}
+    <div class="login_popup" id="popup_form">
+        <div class="box">
+            <div class="form">
+                <h1>Registration Form</h1>
+                {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                <div class="form_group">
+                    <input type="text" placeholder="Enter Username" class="popup_input" name="name">
+                </div>
+                <div class="form_group">
+                    <input type="text" placeholder="Enter your phoneno" class="popup_input" name="phoneno">
+                </div>
+                <div class="form_group">
+                    <input type="text" placeholder="Enter your Age" class="popup_input" name="age">
+                </div>
+                <div class="form_group">
+                    <input type="email" placeholder="Enter your email" class="popup_input" name ="email">
+                </div>
+                <div class="form_group">
+                    <input type="password" placeholder="Enter your password" class="popup_input" name="password1">
+                </div>
+                <div class="form_group">
+                    <input type="password" placeholder="Confirm your password" class="popup_input" name="password2">
+                </div>
+                
+                <button class="btn" type="submit">Login</button>
+                <a href="login">Already have an account?</a>
+            </div>
+        </div>
+    </div> 
+</form>
+
+</body>
+{% endblock body %}

@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block cssfile %}
+<link rel="stylesheet" href=" {% static '/css/index.css' %} ">
+<link rel="stylesheet" href=" {% static '/css/sem.css' %} ">
+{% endblock cssfile %}
+
+{% block body %}
+<div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Distributed Computing</button>
+    <div id="myDropdown" class="dropdown-content">
+    {% for i in data %}
+        {% if i.subject_name == "DC" %}
+        <a href="{{i.exp_file.url}}" target="_blank">{{i.exp_name}}</a>
+        {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button onclick="myFunction2()" class="dropbtn">Department Level Elective-5</button>
+    <div id="myDropdown2" class="dropdown-content">
+    {% for i in data%}
+        {% if i.subject_name == "DLE-5" %}
+        <a href="{{i.exp_file.url}}" target="_blank">{{i.exp_name}}</a>
+        {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button onclick="myFunction3()" class="dropbtn">Department Level Elective-6</button>
+    <div id="myDropdown3" class="dropdown-content">
+    {% for i in data%}
+        {% if i.subject_name == "DLE-6" %}
+        <a href="{{i.exp_file.url}}" target="_blank">{{i.exp_name}}</a>
+        {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button onclick="myFunction4()" class="dropbtn">Institute Level Elective-2</button>
+    <div id="myDropdown4" class="dropdown-content">
+    {% for i in data%}
+        {% if i.subject_name == "ILE-2" %}
+        <a href="{{i.exp_file.url}}" target="_blank">{{i.exp_name}}</a>
+        {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+  </div>
+{% endblock body %}
+
+{% block js %} <script src="{% static '/JS/sem.js'%}"></script> {% endblock js %}

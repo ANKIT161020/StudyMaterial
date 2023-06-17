@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block cssfile %}
+<link rel="stylesheet" href=" {% static '/css/about.css' %} ">
+{% endblock cssfile %}
+
+{% block body %}
+<main>
+    <section class="about-section">
+        <img class="logo" src='{% static "/assets/LOGO.png" %}' style="width: 10rem; height: 10rem;" alt="LOGO">
+      <div class="container">
+        <h1>About Us</h1>
+        <p>Welcome to StudyMaterial, your go-to resource for educational materials and resources. We are passionate about providing high-quality study materials to help students excel in their academic journey.</p>
+        <p>Our mission is to make learning enjoyable, accessible, and effective. We offer a wide range of study materials, including textbooks, e-books, online courses, and interactive learning tools.</p>
+        <p>Whether you're a student looking for study guides, a teacher seeking curriculum resources, or a lifelong learner in pursuit of knowledge, StudyMaterial has something for everyone.</p>
+        <p>Explore our website and discover the wealth of educational materials available. Start your learning journey with StudyMaterial today!</p>
+      </div>
+    </section>
+</main>
+{% endblock body %}

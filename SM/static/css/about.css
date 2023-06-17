@@ -1,0 +1,42 @@
+body, h1, p {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-size: large;
+    font-family: monospace;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    translate: 0px -100px;
+    height: 20vh;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  main {
+    padding: 20px;
+  }
+
+  .about-section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 5px 5px black;
+    border: 2px solid black;
+  }
+
+  .logo{
+    display: block;
+    translate: 70px 100px;
+    filter: drop-shadow(3px 3px 5px rgb(37, 176, 204));
+  }

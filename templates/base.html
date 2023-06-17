@@ -1,0 +1,36 @@
+{% load static %}   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock title %}</title>
+    <link rel="stylesheet" href='{% static "/css/base.css" %}'>
+    {% block cssfile %}{% endblock cssfile %}
+</head>
+<body>
+    <nav class="navbar">
+        <div class="Brand_name">
+            <img src='{% static "/assets/LOGO.png" %}' style="width: 2rem; height: 2rem;" alt="LOGO">
+            <a href="/index"><p class="Name">Study<span class="M">M</span>aterial</p></a>
+        </div>
+        <div class="nav_items">
+            <ul>
+                <li> <a href="/index" class="home">Home</a></li>
+                <li> <a href="/aboutus">About us</a></li>
+                <li> <a href="/contactus">Contact us</a> </li>
+                {% if user.is_superuser%}
+                {% block additem %}{% endblock additem %}
+                {% endif %}
+                <a href="Logout_page" name="LogOut"><li>LogOut</li></a>  
+            </ul>
+        </div>
+
+    </nav>
+{% block body %}{% endblock body %}
+    <footer>&#169;The rights are reserved by StudyMaterial</footer>
+
+    {% block js %}{% endblock js %}
+</body>
+</html>

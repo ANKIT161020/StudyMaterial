@@ -1,0 +1,66 @@
+body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-size: large;
+  font-family:monospace;
+  background-color: #f0f0f0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  translate: 0px -150px;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+main {
+  padding: 20px;
+}
+
+.contact-section {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 5px 5px black;
+  padding: 20px;
+  border: 2px solid black;
+
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px
+}
+
+.logo{
+    display: block;
+    translate: 70px 100px;
+    filter: drop-shadow(3px 3px 5px rgb(37, 176, 204));
+  }
+
+  .btn {
+    width: 20vw;
+    margin-top: 15px;
+    height: 45px;
+    border-radius: 25px;
+    font-size: 25px;
+    border: 2px solid black;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: black;
+  }
+
+  .btn:hover{
+    box-shadow: 3px 3px black;
+  }

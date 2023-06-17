@@ -1,0 +1,32 @@
+{% load static %}
+
+{% block cssfile %}
+<link rel="stylesheet" href=" {% static '/css/reg_page.css' %} ">
+{% endblock cssfile %}
+
+{% block body %}
+<body>
+    <form  method="post">
+    {% csrf_token %}
+    <div class="login_popup" id="popup_form">
+        <div class="box">
+            <div class="form">
+                <h1>Login Form</h1>
+                <div class="form_group">
+                    <input type="text" placeholder="Enter your Username" class="popup_input" name ="username">
+                </div>
+                <div class="form_group">
+                    <input type="password" placeholder="Enter your password" class="popup_input" name="password">
+                </div>
+
+                
+                <button class="btn" type="submit">Login</button>
+                <a href="registration">Make a new account.</a>
+            </div>
+        </div>
+    </div> 
+</form>
+
+</body>
+{% endblock body %}
+

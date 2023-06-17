@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block cssfile %}
+<link rel="stylesheet" href=" {% static '/css/index.css' %} ">
+<link rel="stylesheet" href=" {% static '/css/sem.css' %} ">
+{% endblock cssfile %}
+
+{% block body %}
+<div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">MATHS</button>
+    <div id="myDropdown" class="dropdown-content">
+    {% for i in data %}
+        {% if i.subject_name == "MATHS" %}
+        <a href="{{i.exp_file.url}}" target="_blank">{{i.exp_name}}</a>
+        {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button onclick="myFunction2()" class="dropbtn">DLCOA</button>
+    <div id="myDropdown2" class="dropdown-content">
+    {% for i in data%}
+        {% if i.subject_name == "DLCOA" %}
+        <a href="{{i.exp_file.url}}" target="_blank">{{i.exp_name}}</a>
+        {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button onclick="myFunction3()" class="dropbtn">DS</button>
+    <div id="myDropdown3" class="dropdown-content">
+    {% for i in data%}
+        {% if i.subject_name == "DS" %}
+        <a href="{{i.exp_file.url}}" target="_blank">{{i.exp_name}}</a>
+        {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button onclick="myFunction4()" class="dropbtn">GRAPHICS</button>
+    <div id="myDropdown4" class="dropdown-content">
+    {% for i in data%}
+        {% if i.subject_name == "GRAPHICS" %}
+        <a href="{{i.exp_file.url}}" target="_blank">{{i.exp_name}}</a>
+        {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button onclick="myFunction5()" class="dropbtn">DSGT</button>
+    <div id="myDropdown5" class="dropdown-content">
+    {% for i in data%}
+        {% if i.subject_name == "DSGT" %}
+        <a href="{{i.exp_file.url}}" target="_blank">{{i.exp_name}}</a>
+        {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+{% endblock body %}
+
+{% block js %} <script src="{% static '/JS/sem.js'%}"></script> {% endblock js %}
